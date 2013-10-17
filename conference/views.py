@@ -98,7 +98,7 @@ def ShowSection(request):
             name = authProfile.user.username
         result.append({'name': name, 'doklad': item, 'profile': authProfile})
 
-    paginator = Paginator(result, 5)
+    paginator = Paginator(result, 10)
     page = request.GET.get('page')
     try:
         dokl = paginator.page(page)
